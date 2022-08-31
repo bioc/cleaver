@@ -1,8 +1,8 @@
 RELEASE HISTORY OF THE "cleaver" PACKAGE
 ========================================
 
-Version 1.35.1 [2022-08-31]:
-- Fix: adapt vignette code to new UniProt.ws.
+Version 1.34.1 [2022-08-31]:
+- cherry-pick fix from cleaver 1.35.1: adapt vignette code to new UniProt.ws.
 
 Version 1.27.1 [2020-06-05]:
 - Fix cleavage rule for glutamyl endopeptidase in documentation

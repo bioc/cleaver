@@ -325,7 +325,7 @@ test_that(".cleavagePos", {
              490, 496, 499, 508, 509, 524, 543, 545, 548, 549, 558, 560, 562,
              565, 569, 581, 584, 588, 597, 598)))
 
-  for (i in seq(along=cleavageResults)) {
+  for (i in seq(along.with=cleavageResults)) {
     enzyme <- names(cleavageResults)[i]
     expect_equal(cleaver:::.cleavagePos(peptides, cleaver:::rules[enzyme],
                                         cleaver:::exceptions[enzyme]),

@@ -48,7 +48,7 @@ test_that("cleavageRanges AAString", {
   pepsin <- list(
     "gaju"=IRanges(start=1, end=10),
     "pnm"=IRanges(start=c(1, 7), end=c(6, 10)))
-  for (i in seq(along=peptides)) {
+  for (i in seq(along.with=peptides)) {
     resultTrypsin <- cleavageRanges(peptides[[i]], "trypsin")
     resultTrypsin1 <- cleavageRanges(peptides[[i]], "trypsin",
                                      missedCleavages=1)

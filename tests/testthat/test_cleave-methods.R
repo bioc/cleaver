@@ -40,7 +40,7 @@ test_that("cleave AAString", {
   pepsin <- list(
     AAStringSet("LAAGKVEDSD"),
     AAStringSet(c("AGEPKL", "DAGV")))
-  for (i in seq(along=peptides)) {
+  for (i in seq(along.with=peptides)) {
     resultTrypsin <- cleave(peptides[[i]], "trypsin")
     resultTrypsin1 <- cleave(peptides[[i]], "trypsin", missedCleavages=1)
     resultTrypsin01 <- cleave(peptides[[i]], "trypsin", missedCleavages=0:1)

@@ -1,6 +1,14 @@
 RELEASE HISTORY OF THE "cleaver" PACKAGE
 ========================================
 
+Version 1.41.3 [2024-04-24]:
+- Add 3 different types of trypsin (as defined in PeptideMass): trypsin-high
+  (identical to the current trypsin rule and to PeptideMass' "higher
+  specificity"), trypsin-low (cleavage after K/R but not if followed by P),
+  trypsin-simple (cleavage after K/R even if followed by P);
+  The trypsin rule is identical to trypsin-high and will be kept for
+  backward compatibility.
+
 Version 1.41.2 [2023-12-03]:
 - Add missing documentation for LysargiNase.
 

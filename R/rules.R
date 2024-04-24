@@ -73,9 +73,18 @@ rules <- c(
   "thermolysin"="[^DE](?=[AFILMV])",
   ## Thrombin
   "thrombin"="((?<=G)R(?=G))|((?<=[AFGILTVM][AFGILTVW]P)R(?=[^DE][^DE]))",
-  ## Trypsin
-  "trypsin"="([KR](?=[^P]))|((?<=W)K(?=P))|((?<=M)R(?=P))")
+  ## Trypsin, equals "Trypsin (higher specifity) in
+  ## https://web.expasy.org/peptide_mass/peptide-mass-doc.html#table1
+  "trypsin"="([KR](?=[^P]))|((?<=W)K(?=P))|((?<=M)R(?=P))",
+  ## Trypsin - high specifity
+  "trypsin-high"="([KR](?=[^P]))|((?<=W)K(?=P))|((?<=M)R(?=P))",
+  ## Trypsin - low specifity
+  "trypsin-low"="[KR](?=[^P])",
+  ## Trypsin - (C-term to K/R, even before P)
+  "trypsin-simple"="[KR]"
+)
 
 exceptions <- c(
   ## Trypsin
-  "trypsin"="((?<=[CD])K(?=D))|((?<=C)K(?=[HY]))|((?<=C)R(?=K))|((?<=R)R(?=[HR]))")
+  "trypsin"="((?<=[CD])K(?=D))|((?<=C)K(?=[HY]))|((?<=C)R(?=K))|((?<=R)R(?=[HR]))",
+  "trypsin-high"="((?<=[CD])K(?=D))|((?<=C)K(?=[HY]))|((?<=C)R(?=K))|((?<=R)R(?=[HR]))")

@@ -174,6 +174,13 @@
     \code{trypsin} \tab - \tab - \tab - \tab K,R \tab not P \tab - \cr
     \tab - \tab - \tab W \tab K \tab P \tab - \cr
     \tab - \tab - \tab M \tab R \tab P \tab - \cr
+    \code{trypsin-high} \tab - \tab - \tab - \tab K,R \tab not P \tab - \cr
+    \tab - \tab - \tab W \tab K \tab P \tab - \cr
+    \tab - \tab - \tab M \tab R \tab P \tab - \cr
+    \code{trypsin-low} \tab - \tab - \tab - \tab K,R \tab not P \tab - \cr
+    \tab - \tab - \tab W \tab K \tab P \tab - \cr
+    \tab - \tab - \tab M \tab R \tab P \tab - \cr
+    \code{trypsin-simple} \tab - \tab - \tab - \tab K,R \tab - \tab - \cr
   }
 
   Exceptions:
@@ -181,6 +188,10 @@
     Rule name \tab Enzyme name \tab P4 \tab P3 \tab P2 \tab P1 \tab P1'
       \tab P2' \cr
     trypsin \tab - \tab - \tab C,D \tab K \tab D \tab - \cr \tab \tab -
+      \tab - \tab C \tab K \tab H,Y \tab - \cr
+    \tab \tab - \tab - \tab C \tab R \tab K \tab - \cr
+    \tab \tab - \tab - \tab R \tab R \tab H,R \tab - \cr
+    trypsin-high \tab - \tab - \tab C,D \tab K \tab D \tab - \cr \tab \tab -
       \tab - \tab C \tab K \tab H,Y \tab - \cr
     \tab \tab - \tab - \tab C \tab R \tab K \tab - \cr
     \tab \tab - \tab - \tab R \tab R \tab H,R \tab - \cr
@@ -227,6 +238,9 @@
     \code{thermolysin} \tab Thermolysin \cr
     \code{thrombin} \tab Thrombin \cr
     \code{trypsin} \tab Trypsin \cr
+    \code{trypsin-high} \tab Trypsin, higher specificity as defined in PeptideMass, identical to \emph{trypsin} \cr
+    \code{trypsin-low} \tab Trypsin, C-term to K/R if C-term is not P, as defined in PeptideMass \cr
+    \code{trypsin-simple} \tab Trypsin, C-term to K/R, even before P, as defined in PeptideMass \cr
   }
 }
 \examples{
@@ -338,6 +352,9 @@ cleavageSites(enob, custom=c("K", "K(?=A)"))
   (In) John M. Walker (ed): The Proteomics Protocols
   Handbook, Humana Press (2005).\cr
   \url{https://web.expasy.org/peptide_cutter/peptidecutter_enzymes.html}
+
+  PeptideMass
+  \url{https://web.expasy.org/peptide_mass/peptide-mass-doc.html#table1}
 }
 \seealso{
 \code{\linkS4class{AAString}},

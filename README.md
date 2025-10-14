@@ -2,8 +2,6 @@
 
 <!-- badges: start -->
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![build status](https://github.com/sgibb/cleaver/workflows/R-CMD-check-bioc/badge.svg)](https://github.com/sgibb/cleaver/actions)
-[![codecov.io](https://img.shields.io/codecov/c/github/sgibb/cleaver.svg?branch=master)](https://codecov.io/github/sgibb/cleaver/?branch=master)
 [![license](https://img.shields.io/badge/license-GPL%20%28%3E=%203%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 [![years in bioc](https://bioconductor.org/shields/years-in-bioc/cleaver.svg)](https://bioconductor.org/packages/release/bioc/html/cleaver.html)
@@ -23,9 +21,8 @@ cleaver is part of [Bioconductor](https://bioconductor.org/packages/release/bioc
 ## Install development version (not recommended)
 
 ```r
-install.packages("devtools")
-library("devtools")
-install_github("sgibb/cleaver")
+install.packages("remotes")
+remotes::install_git("https://codeberg.org/sgibb/cleaver")
 ```
 
 ## Usage
@@ -54,4 +51,3 @@ cleave(gaju, "pepsin")
 # [1] "LAAGKVEDSD"
 # (no cleavage)
 ```
-
